@@ -1,2 +1,45 @@
-# SNPs-PyConES26
-This repository includes the slides of the public presentation 'Medicina personalizada: cómo el 0.1% de tu ADN puede cambiarlo todo' of PyConES 2026 and both the code and files used for the practical case.
+# SNP snalysis for personalized medicine with Python
+Python application developed for the PyConES 2026 talk "Personalized medicine: how 0.1% of your DNA can change everything".
+This project demonstrates how Python can be used to identify single nucleotide polymorphisms (SNPs), evaluate their potential biological impact and generate Variant Call Format (VCF) files.
+
+## Features
+- Load reference and patient DNA sequences from FASTA files
+- Detect single nucleotide polymorphisms (SNPs)
+- Annotate detected variants and their potential effects
+- Generate VCF files for downstream genomic analyses
+- Produce a simple mutation report
+
+## Installation
+You simply have to download the .py and fasta files (or get your own fasta files from a database as [NCBI](https://www.ncbi.nlm.nih.gov/)).
+
+## Usage
+Run the script and select:
+1. The reference DNA sequence
+2. The patient's DNA sequence
+
+The program compares both sequences and generates:
+- A list of detected SNPs
+- A summary of their predicted effects
+- A VCF file containing all identified variants
+
+## Example
+Input
+```
+Reference sequence: reference_sequence.fasta
+Patient sequence: patient_sequence.fasta
+```
+Output
+```
+Detected SNPs: 4
+Position: 75203
+Reference: C
+Patient: T
+Effect: Increased risk of type 2 diabetes
+Position: 225424
+Reference: G
+Patient: T
+Effect: Unknown
+...
+Output file:
+variants.vcf
+```
